@@ -1,0 +1,129 @@
+<html>
+<head>
+  <title>Astrology Clients' Data</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #eae5e5;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: #e3f2fd;
+      border-radius: 25px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 80%; 
+      max-width: 600px; 
+    }
+
+    .box h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .box label {
+	  font-size: 1.0rem
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .box input {
+	  background-color: white;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+    }
+
+    .box button {
+      background-color: #006db5;
+	  width: 50%;
+      color: #fff;
+      border: 0;
+      padding: 12px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+	
+	.cen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+	}
+
+    .box button:hover {
+      background-color: #00154d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="center-container">
+    <div class="box">
+      <h2>Insert Data</h2>
+      <form action="append.php" method="post">
+	  <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+	  </div>
+      <div class="relative mb-4">
+        <label for="dob">Date of Birth</label>
+        <input type="dob" id="dob" name="dob" required>
+	  </div>
+	  <div>
+        <label for="tob">Time of Birth</label>
+        <input type="tob" id="tob" name="tob" required>
+	  </div>
+	  <div>
+        <label for="pob">Place of Birth</label>
+        <input type="pob" id="pob" name="pob" required>
+	  </div>
+	  <div class="cen">
+      <button type="submit">Submit</button>
+      </div>
+	  </form>
+	</div>
+  </div>
+
+  <div class="center-container">
+    <div class="box">
+      <h2>Search Data</h2>
+      <form action="search.php" method="post">
+	  <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+	  </div>
+      <div class="relative mb-4">
+        <label for="dob">Date of Birth</label>
+        <input type="dob" id="dob" name="dob">
+	  </div>
+	  <div>
+        <label for="tob">Time of Birth</label>
+        <input type="tob" id="tob" name="tob">
+	  </div>
+	  <div>
+        <label for="pob">Place of Birth</label>
+        <input type="pob" id="pob" name="pob">
+	  </div>
+	  <div class="cen">
+      <button type="submit">Search</button>
+      </div>
+	  </form>
+	</div>
+  </div>
+
+</body>
+
+</html>
